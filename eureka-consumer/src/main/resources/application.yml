@@ -1,0 +1,14 @@
+server:
+  port: 9301 # 消费node端口号
+spring:
+  application:
+    name: spring-cloud-consumer # 消费node名称
+feign:
+  hystrix:
+    enabled: true # 开启熔断器
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/

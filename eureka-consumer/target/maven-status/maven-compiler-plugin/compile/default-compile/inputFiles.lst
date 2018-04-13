@@ -1,0 +1,3 @@
+/Users/yumao/github/eureka/eureka-consumer/src/main/java/me/wangran/springcloud/eureka/component/EurekaConsumerClient.java
+/Users/yumao/github/eureka/eureka-consumer/src/main/java/me/wangran/springcloud/eureka/component/hystrix/EurekaConsumerClientFallback.java
+/Users/yumao/github/eureka/eureka-consumer/src/main/java/me/wangran/springcloud/eureka/controller/EurekaConsumerApplication.java
