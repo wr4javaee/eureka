@@ -1,0 +1,5 @@
+#============================Spring Boot Basic================================#
+# 定义应用名称
+spring:
+  application:
+    name: spring-cloud-provider
