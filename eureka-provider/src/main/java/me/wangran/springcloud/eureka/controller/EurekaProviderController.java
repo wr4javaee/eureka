@@ -17,6 +17,11 @@ public class EurekaProviderController {
     public String hello(
             @RequestParam String consumer) {
         LOG.info("This is Provider, hello {}", consumer);
+        try {
+            Thread.sleep(4731);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "This is Provider, hello " + consumer;
     }
 }

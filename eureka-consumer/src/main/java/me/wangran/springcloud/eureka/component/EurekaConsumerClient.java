@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(
-        name = "spring-cloud-provider",
+        name = "credit-gateway-server",
         fallback = EurekaConsumerClientFallback.class)
 public interface EurekaConsumerClient {
 
-    @RequestMapping(value = "/hello")
+    @RequestMapping(value = "/test/hello")
     String hello(@RequestParam(value = "consumer") String consumer);
 }

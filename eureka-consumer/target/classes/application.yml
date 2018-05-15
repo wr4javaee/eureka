@@ -1,14 +1,29 @@
 server:
   port: 9301 # 消费node端口号
 spring:
-  application:
-    name: spring-cloud-consumer # 消费node名称
+  # refer to https://docs.spring.io/spring-boot/docs/2.0.1.RELEASE/reference/htmlsingle/#boot-features-kafka
+  kafka:
+    bootstrap-servers: 10.141.5.50:9092
+  zipkin:
+    kafka:
+      topic: credit-as-zipkin
+    discoveryClientEnabled: false
+    sender:
+      type: kafka
+  sleuth:
+  # 跟踪全部样本
+    sampler:
+      percentage: 1.0
+      probability: 1.0
 feign:
   hystrix:
-    enabled: true # 开启熔断器
+    enabled: false # 开启熔断器
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:9101/eureka/
+ribbon:
+  ReadTimeout: 1000000
+  SocketTimeout: 1000000
